@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.aspx" />
+    <Content Include="main.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

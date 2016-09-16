@@ -15,11 +15,59 @@ namespace ProjectDownloadExcel
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+                            ScriptManager.ScriptResourceMapping.AddDefinition("jquery",
+                    new ScriptResourceDefinition
+                    {
+                        Path = "~/scripts/jquery-1.4.1.min.js",
+                        DebugPath = "~/scripts/jquery-1.4.1.js",
+                        CdnPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.1.min.js",
+                        CdnDebugPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.1.js"
+                    });
+
+                            panel.CssClass = "formatPanelFather";
+                        Panel p = new Panel();
+                        p.Width= 100;
+                        //p.Height = 100;
+            
+                        p.BackColor = Color.Azure;
+
+                        p.CssClass = "formatPanel";
+                        panel.Controls.Add(p);
+
+                        Panel p2 = new Panel();
+                        p2.Width = 100;
+                        p2.Height = 100;
+                        p2.CssClass = "formatPanel";
+                        p2.BackColor = Color.Green;
+
+            
+                        panel.Controls.Add(p2);
+
+
+                            CheckBox[] cbl = new CheckBox[20];
+                            for (int i = 0; i < 10; i++)
+                            {
+                                
+                                cbl[i] = new CheckBox();
+                                cbl[i].Text = "teste " + i;
+                                cbl[i].CssClass = "checkBoxFormat";
+                                p.Controls.Add(cbl[i]);
+                                // Response.Write("\n" + words[i]);
+                            }
 
         }
 
         protected void btnGerar_Click(object sender, EventArgs e)
         {
+            if (!Page.IsValid)
+            {
+                return;
+            }
+
+
+            //limpar mensagem de validacao:
+
+
             var data = new[]{ 
                                new{ Name="Ram", Email="ram@techbrij.com safaadfafafadsfas sdfdsf sfdasfs asdfsfa", Phone="111-222-3333" },
                                new{ Name="ShyamÇÇÇÇ", Email="shyam@techbrij.com", Phone="159-222-1596" },

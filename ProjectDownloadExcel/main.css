@@ -1,0 +1,21 @@
+﻿.formatPanel {
+
+    float:left;
+    text-align:center;
+    margin:10px;
+}
+
+.formatPanelFather {
+    display: inline-block;
+    width:100%;
+    text-align: center;
+    background-color:aqua;
+     margin-left: auto;
+    margin-right: auto;
+
+}
+
+.checkBoxFormat {
+    padding: 3px;
+    display:inline-block;
+}
